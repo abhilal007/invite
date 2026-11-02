@@ -26,3 +26,13 @@ function updateCountdown() {
 
 updateCountdown();
 window.setInterval(updateCountdown, 1000);
+
+// Load each pinned map only when a guest opens it.
+document.querySelectorAll('.map-disclosure').forEach((panel) => {
+  panel.addEventListener('toggle', () => {
+    const frame = panel.querySelector('iframe[data-src]');
+    if (panel.open && frame && !frame.hasAttribute('src')) {
+      frame.src = frame.dataset.src;
+    }
+  });
+});
