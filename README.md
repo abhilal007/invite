@@ -20,3 +20,9 @@ A small, responsive, static wedding invitation for GitHub Pages. It uses plain H
 ## Theme and loading
 
 The page uses plum, saffron gold, forest green and blush panels, with CSS borders, floral accents and gradients. It has no large background images or animation libraries. The opening image is prioritized, event images are lazy-loaded, and pinned maps are requested on demand. The three 960px JPEGs total about 532 KB, compared with 8.3 MB for the source PNGs.
+
+## RSVP
+
+The navigation links to the RSVP section; the opening section, RSVP section and final closing section link to the published Google Form. It requires Google sign-in, limits each account to one response and lets guests edit their submission. The form records a name, the two function choices, a positive whole-number guest count, and optional names and a message. Email collection and public results summaries are disabled. Responses are automatically linked to the owner's private RSVP guest-list Google Sheet. The site contains only the public responder link; it has no access to the response Sheet.
+
+If you edit the form's questions, the connected Sheet columns update through Google Forms. If you replace the form, update all three responder links in `index.html`.
